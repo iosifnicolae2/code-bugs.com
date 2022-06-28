@@ -4,8 +4,15 @@ metaTitle: 'How to update all packages from package.json'
 metaDesc: 'Best way to upgrade the dependencies from package.json with terminal commands.'
 socialImage: images/22-09-2021.jpg
 date: '2021-09-22'
-tags:
+keywords:
+- nodejs
+- package.json
+- upgrade dependecies
+- node.js
 - nextjs
+- angular
+- vue
+- react
 ---
 
 
