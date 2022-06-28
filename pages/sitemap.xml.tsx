@@ -2,7 +2,7 @@ import React from "react";
 import matter from "gray-matter";
 
 class Sitemap extends React.Component {
-  static async getInitialProps({ res }: any) {
+  static async getInitialProps({ req, res }: any) {
     const fs = require("fs");
     const files = fs.readdirSync("posts");
 
