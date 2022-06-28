@@ -1,11 +1,8 @@
 import React from "react";
-import { GetServerSideProps } from "next";
 import matter from "gray-matter";
 
-const Sitemap: React.FC = () => null;
-
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  if (res) {
+class Sitemap extends React.Component {
+  static async getInitialProps({ res }: any) {
     const fs = require("fs");
     const files = fs.readdirSync("posts");
 
@@ -41,9 +38,6 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     res.write(sitemap);
     res.end();
   }
-  return {
-    props: {},
-  };
-};
+}
 
 export default Sitemap;
