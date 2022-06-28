@@ -3,7 +3,11 @@ import matter from "gray-matter";
 
 class Sitemap extends React.Component {
   static async getInitialProps({ res }: any) {
-    const fs = typeof res.writeHead === "function" ? require("fs") : "";
+    if (typeof res.writeHead !== "function") {
+      return;
+    }
+
+    const fs = require("fs");
     const files = fs?.readdirSync("posts");
 
     const posts = files.map((fileName: string) => {
