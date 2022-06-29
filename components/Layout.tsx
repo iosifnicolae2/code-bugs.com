@@ -5,7 +5,7 @@ export default function Layout({ seo, children }: any) {
   return (
     <>
       <Head>
-        <title>{seo?.metaTitle} | code-bugs.com</title>
+        <title>{seo?.metaTitle}</title>
         <meta property="title" content={seo?.metaTitle} />
         <meta name="description" content={seo?.metaDesc} />
         <meta property="og:title" content={seo?.metaTitle} />

@@ -25,7 +25,7 @@ export async function getStaticProps() {
 }
 
 const seo = {
-  metaTitle: "🚀 Code-bugs.com will fix your issue!",
+  metaTitle: "Fix your issue with Code-bugs.com 🚀",
   metaDesc: "The best website where you can find solution for your issue/bug.",
 };
 
