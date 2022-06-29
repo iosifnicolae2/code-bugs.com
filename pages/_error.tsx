@@ -17,7 +17,7 @@ const ErrorPage = () => {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "lottiefiles/90767-internal-server-error.json",
+        path: "https://code-bugs.com/lottiefiles/90767-internal-server-error.json",
       });
 
       return () => animation.destroy();

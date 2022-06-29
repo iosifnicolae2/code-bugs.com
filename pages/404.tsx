@@ -17,7 +17,7 @@ const NotFoundPage = () => {
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "lottiefiles/4047-404-animation.json",
+        path: "https://code-bugs.com/lottiefiles/4047-404-animation.json",
       });
 
       return () => animation.destroy();
