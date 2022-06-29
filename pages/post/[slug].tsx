@@ -23,16 +23,21 @@ export async function getStaticProps({ params: { slug } }: any) {
     props: {
       frontVariables,
       content,
+      slug,
     },
   };
 }
 
-export default function PostPage({ frontVariables, content }: any) {
+export default function PostPage({ frontVariables, content, slug }: any) {
   return (
     <Layout seo={frontVariables}>
       <div className="prose mx-auto">
         <h1>{frontVariables?.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <a
+          href={`https://github.com/EliseiNicolae/code-bugs.com/blob/main/posts/${slug}.md`}>
+          Edit on Github
+        </a>
       </div>
     </Layout>
   );
