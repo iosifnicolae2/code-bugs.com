@@ -1,11 +1,11 @@
 function generateSitemap() {
   const fs = require("fs");
   const matter = require("gray-matter");
-  const files = fs?.readdirSync("posts");
+  const files = fs.readdirSync("posts");
 
   const posts = files.map(fileName => {
     const slug = fileName.replace(".md", "");
-    const readFile = fs?.readFileSync(`posts/${fileName}`, "utf-8");
+    const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
     const { data: frontVariables } = matter(readFile);
     return {
       slug,
