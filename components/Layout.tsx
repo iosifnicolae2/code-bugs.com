@@ -2,9 +2,6 @@ import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 
-import codeBugs from "@/public/code-bugs.svg";
-import Image from "next/image";
-
 export default function Layout({ seo, children }: any) {
   return (
     <>
@@ -46,9 +43,8 @@ export default function Layout({ seo, children }: any) {
           <div className="container mx-auto flex justify-center">
             <Link href="/">
               <a>
-                <Image
-                  unoptimized
-                  src={codeBugs}
+                <img
+                  src="/images/code-bugs.svg"
                   alt="Picture of the author"
                   width={100}
                   height={60}
