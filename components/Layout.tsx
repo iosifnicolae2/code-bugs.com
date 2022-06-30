@@ -2,6 +2,9 @@ import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 
+import codeBugs from "@/public/code-bugs.svg";
+import Image from "next/image";
+
 export default function Layout({ seo, children }: any) {
   return (
     <>
@@ -39,12 +42,20 @@ export default function Layout({ seo, children }: any) {
         <link rel="icon" href="../public/images/favicon.ico" />
       </Head>
       <div className="flex flex-col min-h-screen">
-        <header className="bg-blue-500 mb-8 py-4">
+        <header className="bg-blue-500 mb-8 py-[5px]">
           <div className="container mx-auto flex justify-center">
             <Link href="/">
-              <a>🏡</a>
+              <a>
+                <Image
+                  unoptimized
+                  src={codeBugs}
+                  alt="Picture of the author"
+                  width={100}
+                  height={60}
+                />
+              </a>
             </Link>
-            <span className="mx-auto">code-bugs.com</span>{" "}
+            <span className="mx-auto" />
           </div>
         </header>
         <main className="container mx-auto flex-1">{children}</main>
