@@ -25,4 +25,4 @@ npm install -g npm-check-updates
 ```
 3. Check your package.json file, and then run `npm install`
 
-🚀  Enjoy!
+🚀  Enjoy! 
