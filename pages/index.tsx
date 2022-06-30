@@ -39,13 +39,18 @@ const seo = {
 export default function Home({ posts }: any) {
   return (
     <Layout seo={seo}>
-      <div className="flex max-w-[600px] mx-auto flex-col p-2 md:p-0">
+      <div className="flex max-w-[650px] mx-auto flex-col p-2 md:p-0">
+        <div className="prose prose-sm sm:prose d:prose-lg mb-[50px]">
+          <h1 className={"text-center m-0"}>
+            These are some bugs/issues that I have fixed recently
+          </h1>
+        </div>
         {posts.map(({ slug, data }: any) => (
           <Link key={slug} href={`/post/${slug}`}>
             <a
-              className="border border-gray-200 hover:shadow-blue-300 m-2 w-full rounded-xl shadow-lg
+              className="border border-gray-200 hover:shadow-blue-300 w-full rounded-xl shadow-lg
               overflow-hidden flex flex-col p-4">
-              <h1>{data.title}</h1>
+              <h5>{data.title}</h5>
               <p className={"flex justify-end pt-[15px]"}>{data.date}</p>
             </a>
           </Link>
